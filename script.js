@@ -7,7 +7,12 @@ const observer = new IntersectionObserver(entries=>{
 }, {
     threshold: 0.8
 })
-
+let circle = document.getElementById("circle");
+const onMouseMove = (e) => {
+  circle.style.left = e.pageX + "px";
+  circle.style.top = e.pageY + "px";
+};
+document.addEventListener("mousemove", onMouseMove);
 const elements = document.querySelectorAll('.observe');
 elements.forEach(el=>{
     observer.observe(el)
