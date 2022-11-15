@@ -13,6 +13,7 @@
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
 }
+
 .observe {
     opacity: 0;
     transform: translateY(2em);
@@ -53,7 +54,7 @@ nav>div {
 
 }
 
-nav>div>a {
+.link {
     padding: 1em 2em;
     border: 2px solid var(--highlight);
     border-radius: 2em;
@@ -62,38 +63,122 @@ nav>div>a {
     text-decoration: none;
 }
 
-nav>div>a:hover {
+.link:hover {
     background-color: var(--highlight);
     color: black;
+    transition-delay: 0ms;
 }
 
 .home-page {
-    background: rgb(9,21,39);
-    background: linear-gradient(0deg, rgba(9,21,39,1) 0%, rgba(14,42,83,1) 100%);
+    background: rgb(9, 21, 39);
+    background: linear-gradient(0deg, rgba(9, 21, 39, 1) 0%, rgba(14, 42, 83, 1) 100%);
     display: flex;
     justify-content: center;
-    
-  
+
+
 }
+
 .home-container {
     font-size: clamp(40px, 8vw, 80px);
-    max-width: 1500px;
+    max-width: 1200px;
     margin: auto;
     height: 100%;
     width: 100%;
 }
+
 .home-page-image {
     position: relative;
     display: inline-block;
     width: clamp(40px, 8vw, 80px);
-    height:clamp(40px, 8vw, 80px);
+    height: clamp(40px, 8vw, 80px);
     border-radius: 100%;
     object-fit: cover;
     top: 0.1em;
     left: 0.1em;
     transition: all 0.3s;
 }
+
 .home-page-image:hover {
     transform: scale(6);
     z-index: 10;
+}
+
+.projects-page {
+    display: flex;
+    justify-content: center;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: auto;
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 8em;
+    padding-top: 10rem;
+    place-items: center;
+}
+
+#first-item {
+  scale: 1.2;
+}
+
+.project-item {
+    width: 100%;
+    display: flex;
+    gap: 2em;
+    position: relative;
+
+}
+
+.project-item>img {
+    max-width: 70%;
+    background-color: red;
+    background-blend-mode: multiply;
+    opacity: 0.5;
+}
+
+.project-item>img:hover {
+    opacity: 1;
+}
+
+.project-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    gap: 1em;
+    pointer-events: none;
+}
+
+.project-content>a>svg {
+    width: 20px;
+    margin-top: 20px;
+    pointer-events: all;
+}
+
+.project-content>h1 {
+    font-size: clamp(16px, 3vw, 30px);
+}
+
+.project-content>h2 {
+    color: var(--highlight);
+}
+
+.project-content>p {
+    padding: 20px;
+    background-color: #112240;
+    font-size: clamp(12px, 2vw, 16px);
+    border-radius: 10px;
+    max-width: 50%;
+    letter-spacing: 0.2px;
+    word-spacing: 1px;
+    line-height: 25px;
+
 }
