@@ -1,7 +1,7 @@
 :root {
 
-    --primary: #0A192F;
-    --text: #E5E4DF;
+    --primary: #091527;
+    --text: #CCD6F6;
     --highlight: #58dee3;
 }
 
@@ -10,12 +10,15 @@
     margin: 0;
     padding: 0;
     color: var(--text);
-    font-family: "Clash Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica ";
+    font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
 }
-body {
-    background-color: var(--primary);
+
+section {
+    min-height: 100vh;
+
 }
+
 header {
     width: 100%;
     position: absolute;
@@ -32,6 +35,7 @@ nav {
     padding: 3em 0;
     align-items: center;
 }
+
 nav>div {
     display: flex;
     gap: 2em;
@@ -50,4 +54,35 @@ nav>div>a {
 nav>div>a:hover {
     background-color: var(--highlight);
     color: black;
+}
+
+.home-page {
+    background: rgb(9,21,39);
+    background: linear-gradient(0deg, rgba(9,21,39,1) 0%, rgba(14,42,83,1) 100%);
+    display: flex;
+    justify-content: center;
+    
+  
+}
+.home-container {
+    font-size: clamp(40px, 8vw, 80px);
+    max-width: 1500px;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+.home-page-image {
+    position: relative;
+    display: inline-block;
+    width: clamp(40px, 8vw, 80px);
+    height:clamp(40px, 8vw, 80px);
+    border-radius: 100%;
+    object-fit: cover;
+    top: 0.1em;
+    left: 0.1em;
+    transition: all 0.3s;
+}
+.home-page-image:hover {
+    transform: scale(6);
+    z-index: 10;
 }
