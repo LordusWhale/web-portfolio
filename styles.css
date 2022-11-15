@@ -20,7 +20,40 @@
     transition: all 1.2s;
 
 }
+.small-nav {
+    position: fixed;
+    bottom: 5em;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(2em);
+    transform: scale(0.3);
+    transition: all 0.3s;
+}
+.small-nav__links {
+    background-color: var(--text);
+    padding: 1em 1em;
+    border-radius: 2rem;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 
+.small-nav__link {
+    background-color: transparent;
+    color: var(--primary);
+    padding: 0 1em;
+    text-decoration: none;
+}
 .in-view {
     opacity: 100;
     transform: translateY(0);
