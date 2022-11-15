@@ -1,0 +1,53 @@
+:root {
+
+    --primary: #0A192F;
+    --text: #E5E4DF;
+    --highlight: #58dee3;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    font-family: "Clash Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica ";
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--primary);
+}
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav {
+    max-width: 1800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 3em 0;
+    align-items: center;
+}
+nav>div {
+    display: flex;
+    gap: 2em;
+
+}
+
+nav>div>a {
+    padding: 1em 2em;
+    border: 2px solid var(--highlight);
+    border-radius: 2em;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+nav>div>a:hover {
+    background-color: var(--highlight);
+    color: black;
+}
