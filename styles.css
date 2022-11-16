@@ -18,7 +18,7 @@ body {
     background: rgb(9, 21, 39);
     background: linear-gradient(0deg, var(--primary) 0%, var(--secondary) 100%);
     overflow-x: hidden;
-
+    position: relative;
 }
 * {
     margin: 0;
@@ -288,6 +288,101 @@ nav > div > img {
 }
 .about-content > div {
     display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.contact-container {
+    
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   position: relative;
+
+}
+.contact-section {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+  
+
+}
+.contact-section > h1 {
+    font-size: clamp(22px, 3vh, 35px);
+
+}
+.contact-section > p {
+    font-size: clamp(16px, 3vh, 30px);
+}
+.contact-section > a {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    color: var(--text);
+    border: 1px solid var(--highlight);
+    font-size: clamp(20px, 3vh, 35px);
+    text-decoration: none;
+    transition: scale 0.6s;
+
+}
+.contact-section > a:hover {
+    scale: 1.2;
+
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--secondary);
+    padding: 2em;
+}
+footer > div {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.contact-follow {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    right: auto;
+    z-index: 10;
+    color: var(--light-slate);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons::after{
+    width: 1px;
+    height: 90px;
+    display: block;
+    background-color: var(--text);
+    content: "";
+}
+.icons >  svg{
+    width: 20px;
+}
+.icons > img {
+    width: 20px;
+    color: white;
+    filter: invert(1);
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 2em;
 }

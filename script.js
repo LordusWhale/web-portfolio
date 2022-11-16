@@ -18,11 +18,12 @@ elements.forEach((el) => {
 
 const navButton = document.getElementById('nav-theme');
 const smallNavButton = document.getElementById('small-nav-theme')
-
+const icons = document.getElementById('icons');
 function toggleTheme() {
   let currentTheme = document.documentElement.dataset.theme
   let newTheme = currentTheme === "light" ? "dark" : "light";
   let attribute = currentTheme === "light" ? './assets/images/light.svg':'./assets/images/dark.svg'
+  icons.style.filter = currentTheme === "light" ? "invert(0)" : "invert(1)"
   document.documentElement.setAttribute("data-theme", newTheme)
   smallNavButton.setAttribute('src', attribute)
   navButton.setAttribute('src', attribute);
