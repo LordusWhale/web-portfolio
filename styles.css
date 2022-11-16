@@ -121,8 +121,10 @@ nav>div {
 
 }
 nav > div > img {
-    width: clamp(40px, 8vw, 40px);
+    width: 40px;
+    transition: all 1s;
 }
+
 
 .link {
     padding: 1em 2em;
@@ -135,10 +137,9 @@ nav > div > img {
 
 .link:hover {
     background-color: var(--highlight);
-    color: black;
+    color: white;
     transition-delay: 0ms;
 }
-
 .home-page {
   
     display: flex;
@@ -264,4 +265,29 @@ nav > div > img {
 
 .end {
     align-items: flex-end;
+}
+
+.about-container {
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   position: relative;
+
+}
+
+.about-content {
+    font-size: clamp(16px, 2vw, 20px);
+    display: flex;
+    letter-spacing: 1px;
+    word-spacing: 0.2px;
+}
+.about-content > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }

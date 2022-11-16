@@ -19,7 +19,7 @@ elements.forEach((el) => {
 const navButton = document.getElementById('nav-theme');
 const smallNavButton = document.getElementById('small-nav-theme')
 
-function toggleTheme(element) {
+function toggleTheme() {
   let currentTheme = document.documentElement.dataset.theme
   let newTheme = currentTheme === "light" ? "dark" : "light";
   let attribute = currentTheme === "light" ? './assets/images/light.svg':'./assets/images/dark.svg'
