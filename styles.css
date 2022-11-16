@@ -80,9 +80,7 @@ body {
     box-shadow: 4px 4px 20px 0px rgba(255, 255, 255, 0.2);
     transition: scale 0.4s;
 }
-.small-nav__links:hover {
-    scale: 1.2;
-}
+
 .small-nav__link {
     background-color: transparent;
     color: var(--text);
