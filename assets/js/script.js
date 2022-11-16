@@ -35,11 +35,6 @@ function toggleTheme() {
 navButton.addEventListener("click", toggleTheme);
 smallNavButton.addEventListener("click", toggleTheme);
 
-const background = document.querySelector("body");
-document.addEventListener("scroll", (e) => {
-  let scroll = window.pageYOffset;
-  background.style.backgroundPositionY = scroll * 0.9 + "px";
-});
 
 const smallNav = document.getElementById("small-nav-id");
 let prev = 0;
