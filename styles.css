@@ -65,22 +65,27 @@ body {
     transition: all 0.3s;
 
 }
-
+.small-nav-theme {
+    width: 40px;
+    margin-left: 10px;
+}
 .small-nav__links {
-    background-color: var(--text);
+    background-color: var(--secondary);
     padding: 1em 1em;
     border-radius: 2rem;
-    font-size: 20px;
+    font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 8px 8px 10px 0px rgba(255, 255, 255, 0.2);
-
+    box-shadow: 4px 4px 20px 0px rgba(255, 255, 255, 0.2);
+    transition: scale 0.4s;
 }
-
+.small-nav__links:hover {
+    scale: 1.2;
+}
 .small-nav__link {
     background-color: transparent;
-    color: var(--primary);
+    color: var(--text);
     padding: 0 1em;
     text-decoration: none;
 }
@@ -116,6 +121,9 @@ nav>div {
     display: flex;
     gap: 2em;
 
+}
+nav > div > img {
+    width: clamp(40px, 8vw, 40px);
 }
 
 .link {

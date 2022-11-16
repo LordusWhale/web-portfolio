@@ -16,13 +16,20 @@ elements.forEach((el) => {
   observer.observe(el);
 });
 
-const button = document.getElementById('button');
+const navButton = document.getElementById('nav-theme');
+const smallNavButton = document.getElementById('small-nav-theme')
 
-button.addEventListener('click', () => {
+function toggleTheme(element) {
   let currentTheme = document.documentElement.dataset.theme
   let newTheme = currentTheme === "light" ? "dark" : "light";
+  let attribute = currentTheme === "light" ? './assets/images/light.svg':'./assets/images/dark.svg'
   document.documentElement.setAttribute("data-theme", newTheme)
-})
+  smallNavButton.setAttribute('src', attribute)
+  navButton.setAttribute('src', attribute);
+}
+
+navButton.addEventListener('click', toggleTheme)
+smallNavButton.addEventListener('click', toggleTheme)
 
 const background = document.querySelector("body");
 document.addEventListener("scroll", (e) => {
