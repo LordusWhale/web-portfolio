@@ -40,15 +40,21 @@ document.addEventListener("scroll", (e) => {
 
 
 
-const navbar = document.getElementById("nav");
 const smallNav = document.getElementById("small-nav-id");
-const smallNavObser = new IntersectionObserver((entries) => {
-  entries.forEach((navBar) => {
-    smallNav.classList.toggle("in-view", !navBar.isIntersecting);
-  });
-});
+let prev = 0;
+document.addEventListener('scroll', (e) => {
+  if (window.pageYOffset > prev){
+   smallNav.classList.remove('in-view');
+  } else {
+    smallNav.classList.add('in-view');
+  }
+  if (window.pageYOffset === 0){
+    smallNav.classList.remove('in-view')
+  }
+  prev = window.pageYOffset;
+})
 
-smallNavObser.observe(navbar);
+
 
 
 let circle = document.getElementById("circle");
