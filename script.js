@@ -16,21 +16,24 @@ elements.forEach((el) => {
   observer.observe(el);
 });
 
-const navButton = document.getElementById('nav-theme');
-const smallNavButton = document.getElementById('small-nav-theme')
-const icons = document.getElementById('icons');
+const navButton = document.getElementById("nav-theme");
+const smallNavButton = document.getElementById("small-nav-theme");
+const icons = document.getElementById("icons");
 function toggleTheme() {
-  let currentTheme = document.documentElement.dataset.theme
+  let currentTheme = document.documentElement.dataset.theme;
   let newTheme = currentTheme === "light" ? "dark" : "light";
-  let attribute = currentTheme === "light" ? './assets/images/light.svg':'./assets/images/dark.svg'
-  icons.style.filter = currentTheme === "light" ? "invert(0)" : "invert(1)"
-  document.documentElement.setAttribute("data-theme", newTheme)
-  smallNavButton.setAttribute('src', attribute)
-  navButton.setAttribute('src', attribute);
+  let attribute =
+    currentTheme === "light"
+      ? "./assets/images/light.svg"
+      : "./assets/images/dark.svg";
+  icons.style.filter = currentTheme === "light" ? "invert(0)" : "invert(1)";
+  document.documentElement.setAttribute("data-theme", newTheme);
+  smallNavButton.setAttribute("src", attribute);
+  navButton.setAttribute("src", attribute);
 }
 
-navButton.addEventListener('click', toggleTheme)
-smallNavButton.addEventListener('click', toggleTheme)
+navButton.addEventListener("click", toggleTheme);
+smallNavButton.addEventListener("click", toggleTheme);
 
 const background = document.querySelector("body");
 document.addEventListener("scroll", (e) => {
@@ -38,24 +41,19 @@ document.addEventListener("scroll", (e) => {
   background.style.backgroundPositionY = scroll * 0.9 + "px";
 });
 
-
-
 const smallNav = document.getElementById("small-nav-id");
 let prev = 0;
-document.addEventListener('scroll', (e) => {
-  if (window.pageYOffset > prev){
-   smallNav.classList.remove('in-view');
+document.addEventListener("scroll", (e) => {
+  if (window.pageYOffset > prev) {
+    smallNav.classList.remove("in-view");
   } else {
-    smallNav.classList.add('in-view');
+    smallNav.classList.add("in-view");
   }
-  if (window.pageYOffset === 0){
-    smallNav.classList.remove('in-view')
+  if (window.pageYOffset === 0) {
+    smallNav.classList.remove("in-view");
   }
   prev = window.pageYOffset;
-})
-
-
-
+});
 
 let circle = document.getElementById("circle");
 const onMouseMove = (e) => {
@@ -63,5 +61,3 @@ const onMouseMove = (e) => {
   circle.style.top = e.pageY + "px";
 };
 document.addEventListener("mousemove", onMouseMove);
-
-
